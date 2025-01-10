@@ -77,9 +77,10 @@ export default function CartContextProvider({ children }) {
     addItemToCart: handleAddItemToCart,
     updateItemQuantity: handleUpdateCartItemQuantity,
   };
-
   
 
   // Render the context provider
-  return <CartContext.Provider value={ctxValue}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={ctxValue}>
+  {children}
+</CartContext.Provider>
 }
